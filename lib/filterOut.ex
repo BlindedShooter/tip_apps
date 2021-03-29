@@ -40,6 +40,8 @@ defmodule TipApps.FilterOut do
         IO.puts filterOut("abc()abc()abc"  , "(" , ")" )
         IO.puts filterOut("abc(abc)abc()abc"  , "(" , ")" )
         IO.puts filterOut("abc(abc"  , "(" , ")" )
+        IO.puts filterOut("abc<-- comment -->123", "<--", "-->")
+        IO.puts filterOut("abc((abc((123))))def", "((", "))")
     end
 
 end
