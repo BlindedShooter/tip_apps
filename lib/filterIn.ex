@@ -42,6 +42,8 @@ defmodule TipApps.FilterIn do
         IO.puts filterIn("abc(abc)abc()abc"  , "(" , ")" )
         IO.puts filterIn("abc(abc"  , "(" , ")" )
         IO.puts filterIn("abc((abc)123)"  , "(" , ")" )
+        IO.puts filterIn("(Nested Test: ) abc((abc)123)"  , "(" , ")")
+        IO.puts filterIn("(Multiple Clauses Test: ) abc(def)123(456)abc", "(", ")")
     end
 
 end
